@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title Kmgen
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "modernizr", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    #header
+      %nav.navbar
+        %h2.logo.four.columns
+          = link_to "km generator", root_path
+        %ul.eight.columns
+          %li
+            = link_to "#" do
+              %i.icon-flag
+              Get started
+          %li
+            = link_to "#" do
+              %i.icon-info
+              About
+    #content{ class: page_classes }
+      = yield

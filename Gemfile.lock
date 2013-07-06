@@ -38,6 +38,16 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    gumby-framework (0.0.1)
+      jquery-rails
+      modernizr-rails
+    haml (4.0.3)
+      tilt
+    haml-rails (0.4)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (>= 3.1, < 4.1)
+      railties (>= 3.1, < 4.1)
     hike (1.2.3)
     i18n (0.6.4)
     jbuilder (1.4.2)
@@ -52,6 +62,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.23)
     minitest (4.7.5)
+    modernizr-rails (2.6.2.3)
     multi_json (1.7.7)
     polyglot (0.3.3)
     rack (1.5.2)
@@ -111,8 +122,11 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  gumby-framework
+  haml-rails
   jbuilder (~> 1.2)
   jquery-rails
+  modernizr-rails
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc
