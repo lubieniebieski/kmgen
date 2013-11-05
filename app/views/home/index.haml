@@ -1,0 +1,22 @@
+%h3 enter your data!
+
+.row
+  = form_for :mileage, url: mileages_path do |f|
+    %ul.six.columns
+      %li.field
+        = f.label :month_number
+        = f.text_field :month_number, class: "numeric input"
+      %li.field
+        = f.label :minimum_cost
+        = f.text_field :minimum_cost, class: "input numeric"
+      %li.field
+        = f.label :start_city
+        = f.text_field :start_city, class: "input text"
+      %li.field
+        = f.label :end_city
+        = f.text_field :end_city, class: "input text"
+      %li.field
+        = f.label :km
+        = f.text_field :km, class: "input numeric"
+      .medium.primary.btn
+        = f.submit "generate"

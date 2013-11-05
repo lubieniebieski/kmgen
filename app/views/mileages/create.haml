@@ -1,0 +1,31 @@
+.row.sixteen.columns
+  .eight.columns
+    %h2= "here's your mileage for #{Date::MONTHNAMES[@mileage.month_number]}:"
+  .two.columns
+    .btn.primary
+      = link_to "click here to recreate", recreate_mileages_path(format: :pdf), method: :post
+%table.table.row
+  %thead.row
+    %td date
+    %td trip name
+    %td kms
+    %td purpose
+    %td cost/km
+    %td trip cost
+    %td overall cost
+  %tbody
+    - @mileage.rows.each do |row|
+      %tr
+        %td= row.date
+        %td= row.trip_name
+        %td= row.km
+        %td= row.purpose
+        %td= number_to_currency(row.price, locale: :pl)
+        %td= number_to_currency(row.cost, locale: :pl)
+        %td= number_to_currency(row.overall_cost, locale: :pl)
+    %tr
+      %td{ colspan: 6, style: "text-align: right;" }
+      %td{ colspan: 2 }
+        %strong= "overall: #{number_to_currency(@mileage.overall_cost, locale: :pl)}"
+
+

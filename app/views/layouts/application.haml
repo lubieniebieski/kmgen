@@ -8,16 +8,16 @@
   %body
     #header
       %nav.navbar
-        %h2.logo.four.columns
-          = link_to "km generator", root_path
+        %h3.four.columns
+          = link_to "milleage report generator", root_path
         %ul.eight.columns
           %li
-            = link_to "#" do
+            = link_to root_path do
               %i.icon-flag
-              Get started
+              get started
           %li
-            = link_to "#" do
+            = link_to about_path do
               %i.icon-info
-              About
-    #content{ class: page_classes }
+              about
+    #content.row{ class: page_classes }
       = yield
